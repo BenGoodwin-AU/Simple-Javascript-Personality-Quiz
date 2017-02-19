@@ -1,0 +1,254 @@
+/*
+ QUIZ WEBSITE LAYOUT ELEMENTS
+ */
+
+html,body {
+	height: 100% !important;
+	margin: 0;
+	background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857;
+	overflow-x: auto;
+	max-width: 100%;
+}
+
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+*::before, *::after {
+    -webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+
+ .section-background-image {
+	background-image: url(http://bengoodwin.com.au/js/images/background.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	opacity: 0.25;
+}
+
+.section {
+	background-color: #fff;
+	color: inherit;
+	position: relative;
+	padding: 85px 0;
+	background-color: #f6f6f6;
+	color: inherit;
+	text-align: center;
+
+
+}
+
+
+.section-dark {
+	background-color: #222;
+	color: #ccc;
+}
+
+.quiz-section {
+	padding: 160px 0;
+	text-align: center;
+	height: 100%;
+}
+
+.quiz-section .container {
+	position: relative;
+	z-index: 1;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.quiz-section:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 1px;
+	vertical-align: middle;
+}
+
+/*make the background somewhat darker*/
+.quiz-section:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	height: 160px;
+	width: 100%;
+	display: block;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0));
+	background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+	opacity: 0.3;
+}
+
+@media ( max-width: 991px ) {
+	.quiz-section.quiz-fullscreen {
+		height: auto;
+	}
+	.quiz-start-link {
+		display: none;
+	}
+}
+
+.quizintrobox {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 30px;
+    padding: 11.5px 17px;
+	max-width: 650px;
+}
+
+.footer-section {
+	padding-bottom: 30px;
+	text-align: center;
+	background-image: url("http://bengoodwin.com.au/js/images/footer-background.png")
+}
+
+.section-background-image {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #222;
+	color: #ccc;
+}
+
+ img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+ QUIZ WEBSITE CONTENT ELEMENTS
+ */
+ 
+ .p {
+    margin: 0 auto 20px;
+	width: 600px;
+	text-align: middle;
+}
+
+ .h1, .h2, .h3, .h4, .h5, .h6 {
+	color: #222;
+	margin-bottom: 10px;
+	line-height: 1.0;
+}
+ 
+.section-heading {
+	position: relative;
+	padding-bottom: 15px;
+	margin: -20px 0 10px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.section-heading:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	height: 2px;
+	width: 100px;
+	background-color: rgba(0,0,0,0.1);
+	left: 50%;
+	right: 50%;
+	text-align: center;
+	margin-left: -50px;
+}
+
+/* Button */
+.button_header,.button_reset{
+	border:1px solid #720216; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 18px 18px 18px 18px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+	 background-color: #A90321; background-image: -webkit-gradient(linear, left top, left bottom, from(#A90321), to(#6D0019));
+	 background-image: -webkit-linear-gradient(top, #A90321, #6D0019);
+	 background-image: -moz-linear-gradient(top, #A90321, #6D0019);
+	 background-image: -ms-linear-gradient(top, #A90321, #6D0019);
+	 background-image: -o-linear-gradient(top, #A90321, #6D0019);
+	 background-image: linear-gradient(to bottom, #A90321, #6D0019);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A90321, endColorstr=#6D0019);
+}
+
+.button_header:hover{
+	 border:1px solid #45010d;
+	 background-color: #770217; background-image: -webkit-gradient(linear, left top, left bottom, from(#770217), to(#3a000d));
+	 background-image: -webkit-linear-gradient(top, #770217, #3a000d);
+	 background-image: -moz-linear-gradient(top, #770217, #3a000d);
+	 background-image: -ms-linear-gradient(top, #770217, #3a000d);
+	 background-image: -o-linear-gradient(top, #770217, #3a000d);
+	 background-image: linear-gradient(to bottom, #770217, #3a000d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#770217, endColorstr=#3a000d);
+}
+
+.button {
+	padding: 9px 14px;
+	border-radius: 0;
+	font-family: "Montserrat", sans-serif;
+	font-size: 11px;
+	line-height: 1.819;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+
+/* footer */ 
+
+.list-inline {
+    list-style: outside none none;
+    margin-left: -5px;
+    padding-left: 0;
+}
+
+
+
+.questions {
+    background-color: #f6f6f6;
+    margin: 15px 0;
+    padding: 30px;
+    text-align: center;
+}
+
+ul, ol {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.invisible {
+	display: none;
+	}
+	
+	a, u {
+    text-decoration: none;
+}
+
+a { color: inherit; } 
+
+#lore_brief {
+max-width: 1170px;
+center: middle;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+#results_screen { 
+max-width: 1170px;
+center: middle;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+}

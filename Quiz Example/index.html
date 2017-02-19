@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+    <title>Witcher Personality Quiz</title>
+    <meta content="Find out what type of Witcher you are from the acclaimed fantasy book series by Andrzej Sapkowski" name="description">
+    <link href="style.css" rel="stylesheet">
+    <script async="" src="quiz.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <section class="quiz-section quiz-fullscreen section section-dark" id="quiz">
+        <div class="section-background-image">
+        </div>
+
+
+        <div class="container">
+            <img alt="Witcher Personality Quiz" src="http://bengoodwin.com.au/js/quizlogo.png">
+
+            <div id ="introbox1" class="quizintrobox">
+                <p><b>Witcher, I welcome thou to your trial!</b> This website will put you through a series of grueling situations and use your responses to determine what type of Witcher you are. This quiz is based on the acclaimed fantasy book series by Andrzej Sapkowski - don't know what that is? Scroll down a little bit!</p>
+                <button class="button_header" id="startQuizBtn" onclick="startQuiz();document.getElementById('footer').scrollIntoView();" type="button">Start Witcher Trial</button>
+			</div>
+        </div>
+    </section>
+
+
+    <section class="section" id="questions">
+        <div class="container" id="lore_brief">
+            <h2 class="section-heading text-center">An Introduction to Witcher Lore</h2>
+
+			<img src="http://bengoodwin.com.au/js/images/witchermed.png" alt="Witcher" height="200" width="636">
+            <p>The Witcher series is most often known around its two main forms of media; the book series by Andrzej Sapkowski and the video game series by CD Projekt. The series is set inside a fantasy medieval world on the landmass known simply as The Continent. The term "Witchers" refer to people who are considered to be "mutants" who have improved their mental and physical conditioning through mysterious rituals. In additon to witchers, there are dwarves; dragons and castles; mages (known as sorcerers) and sorceresses. </p>
+        </div>
+
+
+        <div class="container" id="quiz-questions">
+					
+            <div class="question invisible" id="question-1">
+                <form>
+                    <h2 class="section-heading text-center">In which Kingdom or Realm were you born?</h2>
+
+
+                    <p style="font-style: italic">Your story begins in in the country that you were born. What few years you spent in your home had defining effects on your character.</p>
+                    <input data-endingsentence="As a young child you grew up in Redania (located in the Northern Kingdoms) enjoying prosperity the nation held. " name="rq" onclick="setAnswerButton()" type="radio">Redania
+                    <input data-endingsentence="You are no common boor when it comes to intelligence due to being born in Temeria, the crown of all educated nations in the Northern Kingdoms. " name="rq" onclick="setAnswerButton()" type="radio">Temeria
+                    <input data-endingsentence="You are capable of withstanding harsh weather as a result of being born in the cold and unforgiving climate of Kaedwen. " name="rq" onclick="setAnswerButton()" type="radio">Kaedwen
+                    <input data-endingsentence="You are distrustful by nature due to being raised in Aedirn, which lacks stability and has daily occurrences of attempted regime changes. " name="rq" onclick="setAnswerButton()" type="radio">Aedirn
+                    <input data-endingsentence="You were considered to be a typical cold-hearted Nilfgaardian due to the influence the country embedded within you while growing up there. " name="rq" onclick="setAnswerButton()" type="radio">Nilfgaard
+                </form>
+            </div>
+
+
+            <div class="question invisible" id="question-2">
+                <form>
+                    <h2 class="section-heading text-center">What was your first step towards being a witcher?</h2>
+
+
+                    <p style="font-style: italic">Whilst young you were forced to undergo the Witcher transformation. What were the events that led to this occurring?</p>
+                    <input data-endingsentence="Your journey as a Witcher began when you were forcibly taken from your dwelling in the middle of the night. " name="rq" onclick="setAnswerButton()" type="radio">Forcibly taken from your home
+                    <input data-endingsentence="Your journey as a Witcher started when your parents sold you to a Witcher in exchange for a pouch of gold. " name="rq" onclick="setAnswerButton()" type="radio">Sold by your parents
+                    <input data-endingsentence="You have always despised your parents for forcing you to become a Witcher out of their desire to see less monsters on the road. " name="rq" onclick="setAnswerButton()" type="radio">Willingly given up
+                </form>
+            </div>
+
+
+            <div class="question invisible" id="question-3">
+                <form>
+                    <h2 class="section-heading text-center">You have found something unexpected in a cave system!</h2>
+
+
+                    <p style="font-style: italic">You stumble upon a Kikimore while exploring a cave-system with the another young witcher undergoing the trial process. What will you do?</p>
+                    <input data-endingsentence="You are known for being brave and willing to risk your own life in order to protect others. " name="rq" onclick="setAnswerButton()" type="radio">Fight the Kikimore
+                    <input data-endingsentence="You draw a line between bravery and is not afraid to appear cowardly in the interests of self-preservation. " name="rq" onclick="setAnswerButton()" type="radio"> Run away
+                    <input data-endingsentence="You value self-preservation to the extent that you are willing to kill other people to improve your odds at survival. " name="rq" onclick="setAnswerButton()" type="radio">Injure the other person and run
+                </form>
+            </div>
+
+
+            <div class="question invisible" id="question-4">
+                <form>
+                    <h2 class="section-heading text-center">You have taken your first steps as a qualified Witcher</h2>
+
+
+                    <p style="font-style: italic">You venture out on your own after several hard years of Witcher training. You come across a merchant who begs for protection in exchange for a tiny sum.</p>
+                    <input data-endingsentence="Witcher tradition means nothing to you, and you are willing to accept jobs with incredibly low pay to help people out. " name="rq" onclick="setAnswerButton()" type="radio">Accept the offer
+                    <input data-endingsentence="Above all you consider yourself a monster slayer - you do not get involved with contracts that are not directly related to killing monsters. " name="rq" onclick="setAnswerButton()" type="radio">Reject the offer because you're not a guard
+                    <input data-endingsentence="You are willing to accept a wide variety of jobs provided you are paid enough money. " name="rq" onclick="setAnswerButton()" type="radio"> Demand more money
+                </form>
+            </div>
+
+
+            <div class="question invisible" id="question-5">
+                <form>
+                    <h2 class="section-heading text-center">Sorcerers, Sorceresses & Witchers</h2>
+
+
+                    <p style="font-style: italic">You encounter a Sorceresses who offers to split the reward half/half for killing a local dangerous monster. What do you do?</p>
+                    <input data-endingsentence="You have no qualms with working with Sorceresses(s) if it means less risk while fighting monsters. " name="rq" onclick="setAnswerButton()" type="radio">Accept the offer
+                    <input data-endingsentence="The best words that you can bring to mind when thinking of Sorceresses is repugnance. " name="rq" onclick="setAnswerButton()" type="radio"> Deny the offer & abandon the contract
+                    <input data-endingsentence="You have little respect for Sorceresses who attempt to steal your bussiness, and will glady risk getting into fights with them. " name="rq" onclick="setAnswerButton()" type="radio">Deny the offer and attempt killing the monster yourself
+                </form>
+            </div>
+
+
+            <div class="invisible" id="confirm_answer">
+                <br>
+                <br>
+                <button class="button" onclick="nextQuestion()" type="button">Next Question</button>
+            </div>
+
+
+            <div class="invisible" id="results_screen">
+                <h2 class="section-heading text-center">Who are you?</h2>
+					<div id="generated_text">
+					</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer-section section" id="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                <ul class="list-inline right">
+                    <li>
+                        <p></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
