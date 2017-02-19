@@ -22,7 +22,7 @@ Create a custom attribute called data-endingsentence and define what text should
 <input data-endingsentence="As a young child you grew up in Redania (located in the Northern Kingdoms) enjoying prosperity the nation held." name="rq" onclick="setAnswerButton()" type="radio">Redania
  ```
  
- #### Defining Quiz Results
+#### Defining Quiz Results
 Simply include the following block and the answers will be aggregated together and placed within the generated_text div. 
 
 ```html
